@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div>
+                <h1>Student Task Manager</h1>
+                <p>Organize your school tasks easily.</p>
+            </div>
+            <div class="student-icon">📚</div>
+        </header>
+
+        <section class="stats">
+            <div class="stat-card">
+                <h3>Total Tasks</h3>
+                <p id="totalTasks">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <p id="pendingTasks">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Completed</h3>
+                <p id="completedTasks">0</p>
+            </div>
+        </section>
+
+        <section class="task-form">
+            <h2>Add New Task</h2>
+
+            <form id="taskForm">
+                <input type="text" id="taskTitle"
+                    placeholder="Task title" required>
+
+                <input type="text" id="taskSubject"
+                    placeholder="Subject" required>
+
+                <select id="taskType">
+                    <option value="Assignment">Assignment</option>
+                    <option value="Exam">Exam</option>
+                </select>
+
+                <input type="date" id="taskDate" required>
+
+                <button type="submit" id="submitButton">
+                    Add Task
+                </button>
+            </form>
+        </section>
+
+        <section class="task-section">
+            <div class="task-heading">
+                <h2>My Tasks</h2>
+
+                <select id="filterTasks">
+                    <option value="All">All Tasks</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+
+            <div id="taskList">
+                <p class="empty-message">No tasks yet. Add your first task!</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Student Task Manager | OOP Project</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
